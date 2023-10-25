@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_this, unnecessary_new, use_key_in_widget_constructors, library_private_types_in_public_api, empty_constructor_bodies, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, unnecessary_this, unnecessary_new, use_key_in_widget_constructors, library_private_types_in_public_api, empty_constructor_bodies, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 // ignore: unused_import
 import 'dart:html';
@@ -69,7 +69,7 @@ class MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(title: Text('Messaging')),
       body: Column(children: <Widget>[
         Expanded(child: PostList(this.posts)),
-        Expanded(child: TextInputWidget(this.newPost))
+        TextInputWidget(this.newPost)
         ]));
   }
 }
@@ -95,8 +95,9 @@ class _TextInputWidgetState extends State<TextInputWidget> {
   }
 
   void click(){
-    widget.callback(controller.text);
+    FocusScope.of(context).unfocus();
     controller.clear();
+    widget.callback(controller.text);
   }
 
   @override
@@ -125,6 +126,12 @@ class PostList extends StatefulWidget {
 }
 
 class _PostListState extends State<PostList> {
+  void like(Function callback) {
+    this.setState((){
+      callback();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
   return ListView.builder(
@@ -141,9 +148,16 @@ class _PostListState extends State<PostList> {
             )), 
           Row(
             children: <Widget>[
+              // ignore: avoid_unnecessary_containers
+              Container(
+                child: 
+                  Text(post.likes.toString(), style: TextStyle(fontSize: 20)),
+                padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                ),
               IconButton(
                 icon: Icon(Icons.thumb_up),
-                onPressed: post.likePost,
+                onPressed: () => this.like(post.likePost),
+                color: post.userLiked ? Colors.lightBlue : Colors.black
               )
             ],
           )

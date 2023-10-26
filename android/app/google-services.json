@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "918108809616",
+    "project_id": "messageapp-a9c88",
+    "storage_bucket": "messageapp-a9c88.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918108809616:android:978f11c5f6b2b338562b15",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXW9Ds3Y1Zkg6V51DMldGvmG9Nd23qavI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

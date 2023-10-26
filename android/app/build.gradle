@@ -22,6 +22,8 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
+apply plugin: 'com.google.gms.google-serices'
+
 android {
     namespace "com.example.flutter_application_1"
     compileSdkVersion flutter.compileSdkVersion
@@ -64,4 +66,6 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+    implementaion 'com.google.firebase:firabase-analytics:17.2.0'
+}

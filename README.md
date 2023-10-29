@@ -1,16 +1,16 @@
-# flutter_application_1
 
-A new Flutter project.
+# Simple Message Post App
 
-## Getting Started
+A Message Post App using Flutter this code contained (Stateful widgets, text input, button presses and callback, listview, page navigation)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![App Screenshot](https://raw.githubusercontent.com/nielxxx/App-Niel/main/lib/img/sdadas.PNG)
+![App Screenshot](https://raw.githubusercontent.com/nielxxx/App-Niel/main/lib/img/dasdas.PNG)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Acknowledgements
+
+ - [Referrence Playlist](https://youtube.com/playlist?list=PLzMcBGfZo4-knQWGK2IC49Q_5AnQrFpzv&si=LHGjdY1ow7oH4r_D)
+
